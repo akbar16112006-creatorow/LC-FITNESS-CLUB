@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-headline text-2xl tracking-wide text-[#1E1E1A]">
-                  L C <span className="text-[#4A5300]">FITNESS</span>
+                  L C <span className="text-[#4A5300]">FITNESS CLUB</span>
                 </span>
                 <span className="text-[10px] tracking-widest uppercase font-body font-bold text-[#787866]">
                   KESHAVNAGAR • PUNE

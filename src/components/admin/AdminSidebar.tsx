@@ -59,7 +59,7 @@ export const AdminSidebar: React.FC = () => {
           </div>
           <div>
             <h3 className="font-headline text-lg text-[#1E1E1A] tracking-wider uppercase leading-none">
-              L C <span className="text-[#4A5300]">FITNESS</span>
+              L C <span className="text-[#4A5300]">FITNESS CLUB</span>
             </h3>
             <span className="text-[9px] font-bold text-[#787866] tracking-widest uppercase">CMS PANEL</span>
           </div>

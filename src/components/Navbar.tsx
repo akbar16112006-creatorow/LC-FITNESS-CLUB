@@ -71,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiry }) => {
               />
             </div>
             <span className="font-headline font-bold text-xl sm:text-2xl tracking-wider text-[#1E1E1A] uppercase">
-              L C <span className="text-[#4A5300]">FITNESS</span>
+              L C <span className="text-[#4A5300]">FITNESS CLUB</span>
             </span>
           </a>
 

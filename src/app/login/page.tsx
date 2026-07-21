@@ -59,7 +59,7 @@ export default function LoginPage() {
             />
           </div>
           <h2 className="font-headline text-3xl text-[#1E1E1A] tracking-wide uppercase">
-            L C <span className="text-[#4A5300]">FITNESS</span>
+            L C <span className="text-[#4A5300]">FITNESS CLUB</span>
           </h2>
           <p className="text-xs text-[#787866] font-body mt-1 uppercase tracking-widest flex items-center gap-1.5 justify-center">
             <Sparkles className="w-3.5 h-3.5 text-[#4A5300]" />
