@@ -84,8 +84,8 @@ export const GYM_DETAILS = {
   reviewCount: 465,
   instagramFollowers: '40.7K',
   instagramPosts: 909,
-  instagramHandle: '@lcfitnessclubpune',
-  instagramUrl: 'https://instagram.com/',
+  instagramHandle: '@lc_fitness_club_pune',
+  instagramUrl: 'https://www.instagram.com/lc_fitness_club_pune?igsh=MW5oc3gydmZ2c2tjZA==',
   whatsappNumber: '919762444458',
   timings: {
     weekday: '6:00 AM – 10:30 PM',
