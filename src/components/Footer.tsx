@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Phone, Mail, MapPin, Star, ArrowUp } from 'lucide-react';
 import { GYM_DETAILS } from '../data/gymData';

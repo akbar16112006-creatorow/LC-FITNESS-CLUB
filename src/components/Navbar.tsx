@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageCircle, Menu, X, Sparkles } from 'lucide-react';
 import { GYM_DETAILS } from '../data/gymData';
