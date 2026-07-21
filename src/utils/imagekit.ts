@@ -10,8 +10,8 @@ const DEFAULT_IMAGEKIT_ENDPOINT = 'https://ik.imagekit.io/fctfitness';
 declare const process: { env?: { [key: string]: string | undefined } } | undefined;
 
 export const IMAGEKIT_URL_ENDPOINT = 
-  (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_IMAGEKIT_URL_ENDPOINT) ||
   (typeof process !== 'undefined' && process?.env?.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT) ||
+  (typeof process !== 'undefined' && process?.env?.VITE_IMAGEKIT_URL_ENDPOINT) ||
   DEFAULT_IMAGEKIT_ENDPOINT;
 
 export type ImageTransformationType = 'hero' | 'gallery' | 'card' | 'thumbnail' | 'icon' | 'custom';

@@ -1,20 +1,22 @@
-import { useState } from 'react';
-import { SEO } from './components/SEO';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Facilities } from './components/Facilities';
-import { Membership } from './components/Membership';
-import { PersonalTraining } from './components/PersonalTraining';
-import { ClassSchedule } from './components/ClassSchedule';
-import { Transformations } from './components/Transformations';
-import { InstagramSection } from './components/InstagramSection';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
-import { InquiryModal } from './components/InquiryModal';
-import { MarqueeTicker } from './components/MarqueeTicker';
+'use client';
 
-export function App() {
+import { useState } from 'react';
+import { SEO } from '../components/SEO';
+import { Navbar } from '../components/Navbar';
+import { Hero } from '../components/Hero';
+import { About } from '../components/About';
+import { Facilities } from '../components/Facilities';
+import { Membership } from '../components/Membership';
+import { PersonalTraining } from '../components/PersonalTraining';
+import { ClassSchedule } from '../components/ClassSchedule';
+import { Transformations } from '../components/Transformations';
+import { InstagramSection } from '../components/InstagramSection';
+import { Contact } from '../components/Contact';
+import { Footer } from '../components/Footer';
+import { InquiryModal } from '../components/InquiryModal';
+import { MarqueeTicker } from '../components/MarqueeTicker';
+
+export default function Home() {
   const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<string | undefined>(undefined);
 
@@ -45,7 +47,7 @@ export function App() {
       <Navbar onOpenInquiry={handleOpenInquiry} />
 
       {/* Homepage Flow */}
-      <main>
+      <main className="relative z-10">
         {/* 1. Hero & 2. Trust Statistics */}
         <Hero onOpenInquiry={handleOpenInquiry} />
 
@@ -90,5 +92,3 @@ export function App() {
     </div>
   );
 }
-
-export default App;
