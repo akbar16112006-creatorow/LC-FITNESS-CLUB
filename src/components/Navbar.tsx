@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiry }) => {
           <a href="#home" className="flex items-center gap-3 group shrink-0">
             <div className="h-11 w-11 rounded-full overflow-hidden border border-[#787866]/40 shadow-xs group-hover:scale-105 transition-transform duration-200 bg-white flex items-center justify-center p-0.5">
               <img 
-                src={getImageKitUrl('logo/logo.jpg', 'icon')} 
+                src={getImageKitUrl('logo/logo.jpg?v=2', 'icon')} 
                 alt="L C Fitness Club Logo" 
                 width="44"
                 height="44"
@@ -144,11 +144,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiry }) => {
           <div className="flex items-center justify-between pb-3 border-b border-[#787866]/20 mb-4">
             <div className="flex items-center gap-2.5">
               <div className="h-9 w-9 rounded-full overflow-hidden border border-black/10 bg-white flex items-center justify-center p-0.5 shadow-xs">
-                <img src="/logo.jpg" alt="L C Fitness Club Logo" className="w-full h-full object-contain rounded-full" />
+                <img src="/logo.jpg?v=2" alt="L C Fitness Club Logo" className="w-full h-full object-contain rounded-full" />
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="font-headline font-bold text-lg tracking-wide text-[#1E1E1A] uppercase">
-                  L C <span className="text-[#4A5300]">FITNESS</span>
+                  L C <span className="text-[#4A5300]">FITNESS CLUB</span>
                 </span>
               </div>
             </div>

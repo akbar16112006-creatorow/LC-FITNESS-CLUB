@@ -53,7 +53,7 @@ export default function LoginPage() {
         <div className="text-center mb-8 flex flex-col items-center">
           <div className="h-16 w-16 rounded-full overflow-hidden border border-[#787866]/40 shadow-xs mb-4 bg-white flex items-center justify-center p-0.5">
             <img 
-              src={getImageKitUrl('logo/logo.jpg', 'icon')} 
+              src={getImageKitUrl('logo/logo.jpg?v=2', 'icon')} 
               alt="L C Fitness Logo" 
               className="w-full h-full object-contain rounded-full" 
             />

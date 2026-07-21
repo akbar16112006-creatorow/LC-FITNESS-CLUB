@@ -4,6 +4,32 @@ import { ChevronLeft, ChevronRight, ExternalLink, Volume2, VolumeX } from 'lucid
 import { GYM_DETAILS } from '../data/gymData';
 import { getImageKitUrl } from '../utils/imagekit';
 
+const ReelVideo: React.FC<{ src: string; isActive: boolean; isMuted: boolean }> = ({ src, isActive, isMuted }) => {
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    if (!videoRef.current) return;
+    if (isActive) {
+      videoRef.current.play().catch((err) => {
+        console.log('Autoplay blocked or interrupted:', err);
+      });
+    } else {
+      videoRef.current.pause();
+    }
+  }, [isActive]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      muted={isMuted}
+      loop
+      playsInline
+      className="w-full h-full object-cover rounded-2xl"
+    />
+  );
+};
+
 export const InstagramSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -126,16 +152,7 @@ export const InstagramSection: React.FC = () => {
 
                   {/* Video Player Frame with padding margins */}
                   <div className="flex-1 mx-3 mb-2 rounded-2xl overflow-hidden relative group bg-black flex items-center justify-center">
-                    <video
-                      key={`${reel.id}-${isCenter ? 'active' : 'inactive'}`}
-                      src={reel.videoSrc}
-                      autoPlay={isCenter}
-                      controls={false}
-                      muted={isMuted}
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover rounded-2xl"
-                    />
+                    <ReelVideo src={reel.videoSrc} isActive={isCenter} isMuted={isMuted} />
 
                     {/* Premium Sleek Custom Volume Button Overlay (Center card only) */}
                     {isCenter && (

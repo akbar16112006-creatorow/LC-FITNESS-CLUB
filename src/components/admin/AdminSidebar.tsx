@@ -52,7 +52,7 @@ export const AdminSidebar: React.FC = () => {
         <div className="p-6 border-b border-[#787866]/20 flex items-center gap-3">
           <div className="h-9 w-9 rounded-full overflow-hidden border border-[#787866]/40 bg-white flex items-center justify-center p-0.5">
             <img 
-              src={getImageKitUrl('logo/logo.jpg', 'icon')} 
+              src={getImageKitUrl('logo/logo.jpg?v=2', 'icon')} 
               alt="L C Fitness Logo" 
               className="w-full h-full object-contain rounded-full" 
             />

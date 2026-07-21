@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-4 space-y-4">
             <a href="#home" className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-full overflow-hidden border border-[#787866]/30 shadow-xs bg-white flex items-center justify-center p-0.5">
-                <img src="/logo.jpg" alt="L C Fitness Club Logo" className="w-full h-full object-contain rounded-full" />
+                <img src="/logo.jpg?v=2" alt="L C Fitness Club Logo" className="w-full h-full object-contain rounded-full" />
               </div>
               <div className="flex flex-col">
                 <span className="font-headline text-2xl tracking-wide text-[#1E1E1A]">
