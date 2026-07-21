@@ -99,6 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiry }) => {
           <div className="hidden sm:flex items-center gap-2.5 shrink-0">
             <a
               href={`tel:${GYM_DETAILS.primaryPhone}`}
+              aria-label="Call L C Fitness Club Support Team"
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-body font-bold tracking-wider border border-[#787866] text-[#1E1E1A] hover:bg-[#D7FAFF] transition-colors whitespace-nowrap"
             >
               <Phone className="w-3.5 h-3.5 text-[#4A5300]" />
@@ -107,6 +108,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiry }) => {
 
             <button
               onClick={() => onOpenInquiry('Navbar Join Now')}
+              aria-label="Open Gym Membership Inquiry Form"
               className="btn-primary-lime px-4 py-1.5 rounded-full text-xs font-body font-bold tracking-wider flex items-center gap-1.5 shadow-sm hover:scale-105 transition-transform whitespace-nowrap"
             >
               <Sparkles className="w-3.5 h-3.5 text-[#1E1E1A]" />

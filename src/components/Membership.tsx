@@ -182,6 +182,7 @@ export const Membership: React.FC<MembershipProps> = ({ onOpenInquiry }) => {
                       const modeLabel = activeTab === 'all' ? 'All Packages (Gym+Zumba+Yoga+ABS)' : 'Gym & Cardio';
                       onOpenInquiry(`${modeLabel}: ${plan.name} (₹${plan.price})`);
                     }}
+                    aria-label={`Select and join L C Fitness ${plan.name} Membership`}
                     className={`w-full py-3.5 text-xs sm:text-sm font-body font-bold flex items-center justify-center gap-2 ${
                       isPopular ? 'btn-primary-lime' : isBestValue ? 'btn-secondary-cyan' : 'btn-primary-olive'
                     }`}

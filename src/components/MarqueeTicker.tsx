@@ -24,7 +24,7 @@ export const MarqueeTicker: React.FC<MarqueeTickerProps> = ({
   ];
 
   return (
-    <div className={`w-full overflow-hidden ${bgColor} ${textColor} py-3.5 border-y border-black/10 select-none shadow-xs`}>
+    <div className={`w-full overflow-hidden ${bgColor} ${textColor} py-3.5 border-y border-black/10 select-none shadow-xs`} aria-hidden="true">
       <div className="animate-marquee flex items-center whitespace-nowrap gap-8 font-headline text-xl sm:text-2xl tracking-wider uppercase">
         {/* Render twice for continuous infinite loop */}
         {[...items, ...items].map((text, index) => (

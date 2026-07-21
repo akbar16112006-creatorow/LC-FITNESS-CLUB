@@ -87,9 +87,9 @@ export const Facilities: React.FC = () => {
                       <IconComponent className="w-5 h-5" />
                     </div>
                     <div className="space-y-1.5 md:space-y-1">
-                      <h4 className="font-body font-extrabold text-[#1E1E1A] text-lg md:text-[15px] lg:text-base tracking-wide uppercase leading-snug">
+                      <h3 className="font-body font-extrabold text-[#1E1E1A] text-lg md:text-[15px] lg:text-base tracking-wide uppercase leading-snug">
                         {item.title}
-                      </h4>
+                      </h3>
                       <p className="text-xs sm:text-[13px] text-[#787866] font-body leading-relaxed font-semibold">
                         {item.desc}
                       </p>
