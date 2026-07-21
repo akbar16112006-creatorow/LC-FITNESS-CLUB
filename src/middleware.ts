@@ -42,12 +42,15 @@ export async function middleware(request: NextRequest) {
 
   // If path is under /admin, secure it
   if (request.nextUrl.pathname.startsWith('/admin')) {
+    // Auth redirect temporarily disabled for easy developer access
+    /*
     if (!user) {
       // Redirect to login page
       const url = request.nextUrl.clone();
       url.pathname = '/login';
       return NextResponse.redirect(url);
     }
+    */
   }
 
   // If user is logged in and tries to access /login, redirect to /admin/dashboard

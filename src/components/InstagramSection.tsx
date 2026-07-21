@@ -51,19 +51,19 @@ export const InstagramSection: React.FC = () => {
     {
       id: 'reel-1',
       url: 'https://www.instagram.com/reel/DYNPJUdMVQB/',
-      videoSrc: getImageKitUrl('videos/reel1.mp4'),
+      videoSrc: '/videos/reel1.mp4',
       title: 'Fitness & Strength Form'
     },
     {
       id: 'reel-2',
       url: 'https://www.instagram.com/reel/DZafcUAIxCA/?igsh=bjU1YTdtZmZhOGQ5',
-      videoSrc: getImageKitUrl('videos/reel2.mp4'),
+      videoSrc: '/videos/reel2.mp4',
       title: 'VIP Personal Coaching'
     },
     {
       id: 'reel-3',
       url: 'https://www.instagram.com/reel/DIbV0xwsMyx/?igsh=MThjdDNhd281aDZ3OQ==',
-      videoSrc: getImageKitUrl('videos/reel3.mp4'),
+      videoSrc: '/videos/reel3.mp4',
       title: 'Transformation Highlights'
     }
   ];
