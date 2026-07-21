@@ -4,6 +4,7 @@ import {
   Dumbbell, Clock, Sparkle, Flame, Award, 
   Wind, Users, UserCheck, Droplets, Calendar, Lock, Activity 
 } from 'lucide-react';
+import { getImageKitUrl } from '../utils/imagekit';
 
 export const Facilities: React.FC = () => {
   const amenities = [
@@ -27,8 +28,9 @@ export const Facilities: React.FC = () => {
       {/* Background Gym Image with Warm Gradient Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1600&auto=format&fit=crop"
-          alt="LC Fitness Gym Background"
+          src={getImageKitUrl('facilities/facilities-bg.webp', 'hero')}
+          alt="LC Fitness Gym Facilities Background"
+          loading="lazy"
           className="w-full h-full object-cover opacity-[0.06] filter grayscale contrast-125"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#EFECE6]/85 via-[#EFECE6]/95 to-[#EFECE6]" />

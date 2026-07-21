@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Wind, Users, Star, ShieldCheck } from 'lucide-react';
+import { getImageKitUrl } from '../utils/imagekit';
 
 export const About: React.FC = () => {
   return (
@@ -8,8 +9,9 @@ export const About: React.FC = () => {
       {/* Background Gym Image with Warm Gradient Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop"
+          src={getImageKitUrl('backgrounds/about-bg.webp', 'hero')}
           alt="LC Fitness Gym About Background"
+          loading="lazy"
           className="w-full h-full object-cover opacity-[0.06] filter grayscale contrast-125"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#EFECE6]/85 via-[#EFECE6]/95 to-[#EFECE6]" />
@@ -28,8 +30,11 @@ export const About: React.FC = () => {
               className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-[#E5E2DA] bg-white group h-[440px] sm:h-[520px]"
             >
               <img
-                src="/gym-overview.png"
+                src={getImageKitUrl('facilities/gym-overview.png', 'gallery')}
                 alt="L C Fitness Club Keshavnagar Overview"
+                width="900"
+                height="520"
+                loading="lazy"
                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
               />
             </motion.div>

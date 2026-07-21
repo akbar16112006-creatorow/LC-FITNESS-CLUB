@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Award, CheckCircle2, UserCheck, Flame, ShieldAlert, ArrowRight } from 'lucide-react';
 import { PERSONAL_TRAINING_PLANS, type PersonalTrainingPlan } from '../data/gymData';
+import { getImageKitUrl } from '../utils/imagekit';
 
 interface PersonalTrainingProps {
   onOpenInquiry: (planName?: string) => void;
@@ -27,8 +28,9 @@ export const PersonalTraining: React.FC<PersonalTrainingProps> = ({ onOpenInquir
       {/* Background Gym Image with Warm Gradient Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop"
+          src={getImageKitUrl('backgrounds/pt-bg.webp', 'hero')}
           alt="LC Fitness Personal Training Background"
+          loading="lazy"
           className="w-full h-full object-cover opacity-[0.05] filter grayscale contrast-125"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#EFECE6]/85 via-[#EFECE6]/95 to-[#EFECE6]" />

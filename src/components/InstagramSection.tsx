@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ExternalLink, Volume2, VolumeX } from 'lucide-react';
 import { GYM_DETAILS } from '../data/gymData';
+import { getImageKitUrl } from '../utils/imagekit';
 
 export const InstagramSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -79,7 +80,7 @@ export const InstagramSection: React.FC = () => {
       {/* Background Gym Image with Warm Gradient Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1600&auto=format&fit=crop"
+          src={getImageKitUrl('backgrounds/instagram-bg.webp', 'hero')}
           alt="LC Fitness Instagram Background"
           className="w-full h-full object-cover opacity-[0.05] filter grayscale contrast-125"
         />

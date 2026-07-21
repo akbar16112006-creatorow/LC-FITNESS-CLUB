@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Music, Heart, Shield, Droplets, Sparkles } from 'lucide-react';
 import { WEEKLY_SCHEDULE } from '../data/gymData';
+import { getImageKitUrl } from '../utils/imagekit';
 
 export const ClassSchedule: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'zumba' | 'yoga' | 'abs' | 'steam'>('all');
@@ -94,8 +95,9 @@ export const ClassSchedule: React.FC = () => {
       {/* Background Gym Image with Warm Gradient Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1600&auto=format&fit=crop"
+          src={getImageKitUrl('backgrounds/classes-bg.webp', 'hero')}
           alt="LC Fitness Classes Background"
+          loading="lazy"
           className="w-full h-full object-cover opacity-[0.05] filter grayscale contrast-125"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#EFECE6]/85 via-[#EFECE6]/95 to-[#EFECE6]" />
@@ -241,7 +243,8 @@ export const ClassSchedule: React.FC = () => {
                 Gents Steam Day
               </h4>
               <p className="text-[11px] text-[#787866] mt-0.5 font-body">
-                Post-workout steam recovery session for male members during Sunday morning hours.
+                Post-workout steam recovery 
+                 for male members during Sunday morning hours.
               </p>
             </div>
           </div>

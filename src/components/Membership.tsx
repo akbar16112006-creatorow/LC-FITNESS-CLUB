@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Sparkles, AlertCircle, ArrowRight } from 'lucide-react';
 import { MEMBERSHIP_PLANS, ALL_INCLUSIVE_PLANS, type MembershipPlan } from '../data/gymData';
+import { getImageKitUrl } from '../utils/imagekit';
 
 interface MembershipProps {
   onOpenInquiry: (planName?: string) => void;
@@ -40,8 +41,9 @@ export const Membership: React.FC<MembershipProps> = ({ onOpenInquiry }) => {
       {/* Background Gym Image with Warm Gradient Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1600&auto=format&fit=crop"
+          src={getImageKitUrl('backgrounds/membership-bg.webp', 'hero')}
           alt="LC Fitness Membership Background"
+          loading="lazy"
           className="w-full h-full object-cover opacity-[0.05] filter grayscale contrast-125"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#EFECE6]/85 via-[#EFECE6]/95 to-[#EFECE6]" />

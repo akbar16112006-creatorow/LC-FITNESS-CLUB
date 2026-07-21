@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageCircle, Menu, X, Sparkles } from 'lucide-react';
 import { GYM_DETAILS } from '../data/gymData';
+import { getImageKitUrl } from '../utils/imagekit';
 
 interface NavbarProps {
   onOpenInquiry: (planName?: string) => void;
@@ -59,7 +60,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiry }) => {
           {/* Brand Logo & Name */}
           <a href="#home" className="flex items-center gap-3 group shrink-0">
             <div className="h-11 w-11 rounded-full overflow-hidden border border-[#787866]/40 shadow-xs group-hover:scale-105 transition-transform duration-200 bg-white flex items-center justify-center p-0.5">
-              <img src="/logo.jpg" alt="L C Fitness Club Logo" className="w-full h-full object-contain rounded-full" />
+              <img 
+                src={getImageKitUrl('logo/logo.jpg', 'icon')} 
+                alt="L C Fitness Club Logo" 
+                width="44"
+                height="44"
+                loading="eager"
+                fetchPriority="high"
+                className="w-full h-full object-contain rounded-full" 
+              />
             </div>
             <span className="font-headline font-bold text-xl sm:text-2xl tracking-wider text-[#1E1E1A] uppercase">
               L C <span className="text-[#4A5300]">FITNESS</span>

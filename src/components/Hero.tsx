@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Calendar, Plus } from 'lucide-react';
 import { GYM_DETAILS } from '../data/gymData';
+import { getImageKitUrl } from '../utils/imagekit';
 
 interface HeroProps {
   onOpenInquiry: (planName?: string) => void;
@@ -14,8 +15,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenInquiry }) => {
       {/* Background Gym Photo with Warm Grayscale Blend */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1600&auto=format&fit=crop"
+          src={getImageKitUrl('hero/gym-hero-bg.webp', 'hero')}
           alt="LC Fitness Gym Background"
+          loading="eager"
+          fetchPriority="high"
           className="w-full h-full object-cover opacity-[0.22] filter grayscale contrast-[1.15]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-[#EFECE6]/85 to-[#EFECE6]" />

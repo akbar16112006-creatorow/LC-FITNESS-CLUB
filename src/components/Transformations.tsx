@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { getImageKitUrl } from '../utils/imagekit';
 
 interface TransformCard {
   id: number;
@@ -43,20 +44,20 @@ const transforms: TransformCard[] = [
   {
     id: 4,
     image: '/transforms/transform4.png',
-    alt: 'Women Body Transformation at LC Fitness Club Pune',
+    alt: 'Fat Loss Transformation Journey at LC Fitness Club',
     name: 'LC Fitness Member',
-    result: 'Complete Body Recomp',
-    duration: 'Personal Training',
-    tag: 'Fat Loss',
+    result: 'Fat Loss & Toning',
+    duration: '4 Months',
+    tag: 'Toning',
   },
   {
     id: 5,
     image: '/transforms/transform5.png',
-    alt: '90kg to 84kg Body Transformation at LC Fitness Club',
+    alt: 'Overall Physique Recomposition Transformation at LC Fitness Club',
     name: 'LC Fitness Member',
-    result: '90kg → 84kg',
-    duration: 'Lean Body Plan',
-    tag: 'Muscle Gain',
+    result: 'Body Recomposition',
+    duration: '5 Months',
+    tag: 'Strength',
   },
 ];
 
@@ -72,11 +73,9 @@ export const Transformations: React.FC = () => {
   }, []);
 
   const getCardStyle = (index: number) => {
-    const total = transforms.length;
     const isCenter = index === activeIndex;
-    const isLeft = index === (activeIndex - 1 + total) % total;
-    const isRight = index === (activeIndex + 1) % total;
-    const offset = isMobile ? 70 : 150;
+    const isLeft = index === (activeIndex - 1 + transforms.length) % transforms.length;
+    const offset = isMobile ? 60 : 130;
 
     if (isCenter) {
       return {
@@ -96,7 +95,7 @@ export const Transformations: React.FC = () => {
         filter: 'brightness(70%) blur(1px)',
         pointerEvents: 'auto' as const
       };
-    } else if (isRight) {
+    } else {
       return {
         x: offset,
         scale: 0.85,
@@ -104,15 +103,6 @@ export const Transformations: React.FC = () => {
         opacity: 0.5,
         filter: 'brightness(70%) blur(1px)',
         pointerEvents: 'auto' as const
-      };
-    } else {
-      return {
-        x: 0,
-        scale: 0.7,
-        zIndex: 0,
-        opacity: 0,
-        filter: 'brightness(50%) blur(4px)',
-        pointerEvents: 'none' as const
       };
     }
   };
@@ -123,8 +113,9 @@ export const Transformations: React.FC = () => {
       {/* Background Gym Image with Warm Gradient Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop"
+          src={getImageKitUrl('backgrounds/transformations-bg.webp', 'hero')}
           alt="LC Fitness Transformations Background"
+          loading="lazy"
           className="w-full h-full object-cover opacity-[0.05] filter grayscale contrast-125"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#EFECE6]/85 via-[#EFECE6]/95 to-[#EFECE6]" />
@@ -182,8 +173,11 @@ export const Transformations: React.FC = () => {
                   {/* Image Frame */}
                   <div className="flex-1 mx-3 my-2 rounded-2xl overflow-hidden relative bg-black flex items-center justify-center">
                     <img
-                      src={card.image}
+                      src={getImageKitUrl(`gallery/${card.image.replace('/transforms/', '')}`, 'gallery')}
                       alt={card.alt}
+                      width="900"
+                      height="500"
+                      loading={isCenter ? "eager" : "lazy"}
                       className="w-full h-full object-cover object-top rounded-2xl"
                     />
                   </div>
