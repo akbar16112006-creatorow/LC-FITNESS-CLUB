@@ -5,7 +5,7 @@
  */
 
 // Retrieve ImageKit URL Endpoint from environment variables (supports Vite & Next.js conventions)
-const DEFAULT_IMAGEKIT_ENDPOINT = 'https://ik.imagekit.io/fctfitness';
+const DEFAULT_IMAGEKIT_ENDPOINT = 'https://ik.imagekit.io/0q9tfyg2b';
 
 declare const process: { env?: { [key: string]: string | undefined } } | undefined;
 
